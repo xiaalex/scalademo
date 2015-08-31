@@ -19,13 +19,6 @@ public class EditDistance {
         // start zero
         minCosts[0][0] = 0;
 
-        for (int j = 1; j <= w2len; j++) {
-            minCosts[0][j] = 1 + minCosts[0][j - 1];
-        }
-        for (int i = 1; i <= w1len; i++) {
-            minCosts[i][0] = 1 + minCosts[i - 1][0];
-        }
-
         for (int i = 0; i < w1len; i++) {
             for (int j = 0; j < w2len; j++) {
                 // 0 0

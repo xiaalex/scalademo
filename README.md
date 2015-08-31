@@ -1,4 +1,4 @@
-## Scala sample code
+## Java and Scala sample code
     
 This project includes some Java and Scala implementations for some algorithms.
 
@@ -27,6 +27,10 @@ The max substring of unique chars of a string
 #### Word Break
 
 Given a string and a dictionary, break string into words
+
+#### First Missing Positive
+
+The first missing positive for an integer array
 
 ### Scala implementation
 
