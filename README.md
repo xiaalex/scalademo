@@ -36,6 +36,10 @@ Given two words (start and end) and a dictionary, find the length of shortest tr
 
 The first missing positive for an integer array
 
+#### Search String
+
+Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+
 ### Scala implementation
 
 #### Group by code example
