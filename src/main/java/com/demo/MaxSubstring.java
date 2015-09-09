@@ -1,5 +1,7 @@
 package com.demo;
 
+import java.util.HashMap;
+
 public class MaxSubstring {
 
     public String uniqueChars(String s) {
@@ -37,4 +39,34 @@ public class MaxSubstring {
         else
             return prevStr;
     }
+
+    public String kuniqueChars(String s, int k) {
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        int start = 0;
+        int end = 0;
+        String maxstr = "";
+     
+        for (int i = 0; i < s.length(); i++) {
+            char c = s.charAt(i);
+            map.put(c, i);
+            end = i;
+            
+            if (map.size() > k) {
+                String sub = s.substring(start, end);
+                if (sub.length() > maxstr.length()) 
+                    maxstr = sub;
+                    
+                // move left point to right to keep only k chars
+                System.out.printf("%d %d \n", start, end);
+                char first = s.charAt(start);
+                start = map.get(first) + 1;
+                map.remove(first);
+            }
+        }
+        if (maxstr.length() == 0)
+            maxstr = s;
+
+        return maxstr;
+    }
+
 }
